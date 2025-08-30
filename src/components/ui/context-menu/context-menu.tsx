@@ -90,31 +90,33 @@ const ContextMenuContent = ({
 )
 ContextMenuContent.displayName = ContextMenuPrimitive.Content.displayName
 
-const ContextMenuItem = ({
-  ref,
-  className,
-  inset,
-  hasIcon,
-  ...props
-}: React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {
-  inset?: boolean
-  hasIcon?: boolean
-} & {
-  ref?: React.Ref<React.ElementRef<typeof ContextMenuPrimitive.Item> | null>
-}) => (
-  <ContextMenuPrimitive.Item
-    ref={ref}
-    className={clsxm(
-      'cursor-menu focus:bg-accent focus:text-white text-sm text-foreground relative flex select-none items-center rounded-[5px] px-2.5 py-1 outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
-      'data-[highlighted]:bg-accent data-[highlighted]:text-white focus-within:outline-transparent',
-      'h-[28px]',
-      inset && 'pl-8',
-      hasIcon ? 'px-8' : 'pr-8',
+const ContextMenuItem = React.memo(
+  ({
+    ref,
+    className,
+    inset,
+    hasIcon,
+    ...props
+  }: React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {
+    inset?: boolean
+    hasIcon?: boolean
+  } & {
+    ref?: React.Ref<React.ElementRef<typeof ContextMenuPrimitive.Item> | null>
+  }) => (
+    <ContextMenuPrimitive.Item
+      ref={ref}
+      className={clsxm(
+        'cursor-menu focus:bg-accent focus:text-white text-sm text-foreground relative flex select-none items-center rounded-[5px] px-2.5 py-1 outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+        'data-[highlighted]:bg-accent data-[highlighted]:text-white focus-within:outline-transparent',
+        'h-[28px]',
+        inset && 'pl-8',
+        hasIcon ? 'px-8' : 'pr-8',
 
-      className,
-    )}
-    {...props}
-  />
+        className,
+      )}
+      {...props}
+    />
+  ),
 )
 ContextMenuItem.displayName = ContextMenuPrimitive.Item.displayName
 
