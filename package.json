@@ -73,7 +73,7 @@
     "tailwindcss-animate": "1.0.7",
     "tailwindcss-safe-area": "1.1.0",
     "typescript": "5.9.2",
-    "vite": "7.1.2",
+    "vite": "7.1.5",
     "vite-plugin-checker": "0.10.2",
     "vite-plugin-route-builder": "0.3.0",
     "vite-tsconfig-paths": "5.1.4"
