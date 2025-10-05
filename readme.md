@@ -8,7 +8,7 @@ This is a meticulously designed Vite + React template that demonstrates how to m
 
 ### 🤖 AI Programming Optimization Showcase
 
-- **Claude Rule Engineering** - Precisely guide AI behavior patterns and development habits through CLAUDE.md
+- **Claude Rule Engineering** - Precisely guide AI behavior patterns and development habits
 - **Cursor Rule Integration** - Complete Cursor AI configuration rules in `.cursor/rules/` directory
 - **Intelligent Architecture Design** - File organization structure optimized for AI understanding and code generation
 - **Convention over Configuration** - Improve AI code generation quality through clear naming patterns and structural conventions
@@ -69,11 +69,12 @@ pnpm dev
 This template comes pre-configured with comprehensive AI programming rules:
 
 #### Claude Rule Engineering
-- **`CLAUDE.md`** - Contains detailed Claude AI behavior guidance rules
+
 - **Project-Level Configuration** - Specific development conventions and patterns for this project
 - **Global Rules** - User-level AI programming preferences and workflows
 
 #### Cursor Integration Configuration
+
 - **`.cursor/rules/`** - Contains dedicated Cursor AI rule sets
   - `component-organization.mdc` - Component organization standards
   - `routing.mdc` - Routing pattern guidance
@@ -83,6 +84,7 @@ This template comes pre-configured with comprehensive AI programming rules:
   - `state-management.mdc` - State management patterns
 
 #### Intelligent Conventions
+
 - **File-Based Routing** - Architecture designed for easy AI understanding and generation
 - **Component Architecture** - Clear component layering and naming conventions
 - **State Management** - Jotai-based state management patterns, easy for AI to understand and extend
@@ -113,7 +115,7 @@ src/
     ├── state-management.mdc
     └── development.mdc
 
-CLAUDE.md               # Claude AI project rules
+
 ```
 
 ## 🎨 UI Component System
@@ -172,7 +174,7 @@ AI-friendly code standard configurations:
 
 ### Claude Rule Engineering Key Points
 
-1. **Clear Project Structure** - Define clear file organization rules through CLAUDE.md
+1. **Clear Project Structure** - Define clear file organization rules
 2. **Convention over Configuration** - Use consistent naming and structural patterns
 3. **Context Optimization** - Provide sufficient project information to help AI understand code intent
 4. **Workflow Integration** - Define clear development processes and quality check standards
@@ -206,7 +208,6 @@ Each `.cursor/rules/*.mdc` file demonstrates domain-specific AI guidance princip
 
 The project contains comprehensive AI programming guidance documentation:
 
-- **[CLAUDE.md](./CLAUDE.md)** - Claude AI project rules and conventions
 - **[.cursor/rules/](./.cursor/rules/)** - Cursor AI specialized rule collections
 - **[Development Guide](#)** - Complete development workflow
 - **[Architecture Documentation](#)** - System design and pattern descriptions
