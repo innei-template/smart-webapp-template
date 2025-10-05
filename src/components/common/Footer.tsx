@@ -8,13 +8,13 @@ export const Footer = () => {
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="flex flex-col items-center space-y-4">
           {/* 主要内容 */}
-          <div className="flex items-center space-x-3 text-sm text-gray-600 dark:text-gray-400">
+          <div className="flex items-center space-x-3 text-sm text-text-secondary">
             <span>Made with ❤️ by</span>
             <a
               href="https://github.com/innei"
               target="_blank"
               rel="noopener noreferrer"
-              className="h-auto p-0 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium flex items-center space-x-1"
+              className="h-auto p-0 text-text-secondary hover:text-text font-medium flex items-center space-x-1"
             >
               <i className="i-mingcute-github-line text-base" />
               <span>@Innei</span>
@@ -39,7 +39,7 @@ export const Footer = () => {
               </a>
             </Button>
 
-            <div className="w-px h-4 bg-gray-300 dark:bg-gray-700" />
+            <div className="w-px h-4 bg-separator" />
 
             <span className="text-xs text-text-secondary">{name}</span>
           </div>

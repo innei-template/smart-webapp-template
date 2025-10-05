@@ -561,7 +561,6 @@ export const Component = () => {
                           id="sound-switch"
                           checked={enableSound}
                           onCheckedChange={setEnableSound}
-                          thumbIcon={<i className="i-mingcute-volume-line" />}
                         />
                       </div>
                     </div>

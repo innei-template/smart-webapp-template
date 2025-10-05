@@ -31,6 +31,45 @@
   --cursor-radio: default;
   --cursor-switch: default;
   --cursor-card: default;
+
+  --radius: 0.625rem;
+  /* Pastel provides semantic colors (background, text, accent, border, etc).
+     Keep only non-Pastel variables here. */
+
+  /* Shadcn compatibility vars mapped to Pastel tokens */
+  --background: var(--color-background);
+  --foreground: var(--color-text);
+  --card: var(--color-material-opaque);
+  --card-foreground: var(--color-text);
+  --popover: var(--color-material-medium);
+  --popover-foreground: var(--color-text);
+  --primary: var(--color-primary);
+  --primary-foreground: var(--color-white);
+  --secondary: var(--color-fill-secondary);
+  --secondary-foreground: var(--color-text);
+  --muted: var(--color-fill-tertiary);
+  --muted-foreground: var(--color-text-tertiary);
+  --accent: var(--color-accent);
+  --accent-foreground: var(--color-white);
+  --destructive: var(--color-red);
+  --border: var(--color-border);
+  --input: var(--color-border-secondary);
+  --ring: var(--color-primary);
+
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
 :root,
@@ -171,4 +210,45 @@ body {
   font-feature-settings:
     'rlig' 1,
     'calt' 1;
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  /* Use Pastel palette tokens; provide minimal shims for existing classes */
+  --color-ring: var(--color-accent);
+  --color-foreground: var(--color-text);
+  --color-muted-foreground: var(--color-text-secondary);
+}
+
+@layer theme {
+  :root {
+    @variant dark {
+      --chart-1: oklch(0.488 0.243 264.376);
+      --chart-2: oklch(0.696 0.17 162.48);
+      --chart-3: oklch(0.769 0.188 70.08);
+      --chart-4: oklch(0.627 0.265 303.9);
+      --chart-5: oklch(0.645 0.246 16.439);
+
+      --sidebar: oklch(0.205 0 0);
+      --sidebar-foreground: oklch(0.985 0 0);
+      --sidebar-primary: oklch(0.488 0.243 264.376);
+      --sidebar-primary-foreground: oklch(0.985 0 0);
+      --sidebar-accent: oklch(0.269 0 0);
+      --sidebar-accent-foreground: oklch(0.985 0 0);
+      --sidebar-border: oklch(1 0 0 / 10%);
+      --sidebar-ring: oklch(0.556 0 0);
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

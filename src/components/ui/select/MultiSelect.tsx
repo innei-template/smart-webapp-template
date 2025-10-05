@@ -130,7 +130,7 @@ export const MultiSelect: FC<MultiSelectProps> = ({
           'placeholder:text-text-secondary',
           'disabled:cursor-not-allowed disabled:opacity-50',
           '[&>span]:line-clamp-1',
-          'shadow-zinc-100 dark:shadow-zinc-800 shadow-sm hover:shadow',
+          'shadow-sm hover:shadow',
           disabled && 'cursor-not-allowed opacity-30',
         )}
       >

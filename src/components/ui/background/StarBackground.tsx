@@ -116,7 +116,7 @@ function StarsBackground({
     <div
       data-slot="stars-background"
       className={cn(
-        'relative size-full overflow-hidden bg-material-dark2 dark:bg-[radial-gradient(ellipse_at_bottom,_#262626_0%,_#000_100%)]',
+        'relative size-full overflow-hidden bg-background',
         className,
       )}
       onMouseMove={handleMouseMove}

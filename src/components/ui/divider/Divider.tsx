@@ -8,11 +8,7 @@ export const Divider: FC<
   const { className, ...rest } = props
   return (
     <hr
-      className={clsxm(
-        'my-4 h-[0.5px] border-0',
-        'bg-[rgba(0,0,0,0.1)] dark:bg-[rgba(255,255,255,0.1)]',
-        className,
-      )}
+      className={clsxm('my-4 h-[0.5px] border-0', 'bg-separator', className)}
       {...rest}
     />
   )
@@ -26,7 +22,7 @@ export const DividerVertical: FC<
     <span
       className={clsxm(
         'mx-3 inline-block h-full w-[0.5px] select-none text-transparent',
-        'bg-[rgba(0,0,0,0.1)] dark:bg-[rgba(255,255,255,0.1)]',
+        'bg-separator',
         className,
       )}
       {...rest}
