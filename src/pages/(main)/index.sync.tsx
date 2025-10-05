@@ -170,7 +170,7 @@ export const Component = () => {
                       type="button"
                       onClick={() => setTheme(value)}
                       className={`
-                        p-1.5 rounded-md transition-all text-xs font-medium
+                        size-7 flex items-center justify-center rounded-md transition-all text-xs font-medium
                         ${
                           theme === value
                             ? 'bg-background text-text shadow-sm'
@@ -195,7 +195,7 @@ export const Component = () => {
         {/* Hero Section */}
         <section className="pt-24 pb-16">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-material-medium rounded-full text-sm text-placeholder-text mb-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-material-medium rounded-full text-sm text-text-quaternary mb-8">
               <div className="w-2 h-2 bg-green rounded-full" />
               Ready for production
             </div>
@@ -203,10 +203,12 @@ export const Component = () => {
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-text mb-6">
               Modern React
               <br />
-              <span className="text-placeholder-text">Template</span>
+              <span className="via-cyan from-accent to-accent/80 bg-gradient-to-r bg-clip-text text-transparent">
+                Template
+              </span>
             </h1>
 
-            <p className="text-xl text-placeholder-text mb-12 leading-relaxed">
+            <p className="text-xl text-text-secondary mb-12 leading-relaxed">
               A production-ready template with modern tooling, best practices,
               and beautiful components. Start building immediately.
             </p>
@@ -239,7 +241,7 @@ export const Component = () => {
             <h2 className="text-2xl font-semibold text-text mb-4">
               Built with modern tools
             </h2>
-            <p className="text-placeholder-text">
+            <p className="text-text-secondary">
               Everything you need for a professional development experience
             </p>
           </div>
@@ -262,7 +264,7 @@ export const Component = () => {
             <h2 className="text-3xl font-bold text-text mb-4">
               Everything you need
             </h2>
-            <p className="text-xl text-placeholder-text">
+            <p className="text-xl text-text-secondary">
               A complete development environment ready to go
             </p>
           </div>
@@ -275,13 +277,13 @@ export const Component = () => {
               >
                 <div className="w-12 h-12 bg-fill rounded-lg flex items-center justify-center mb-4 group-hover:bg-fill-secondary transition-colors">
                   <i
-                    className={`${feature.icon} w-6 h-6 text-placeholder-text group-hover:text-text`}
+                    className={`${feature.icon} w-6 h-6 text-text-quaternary group-hover:text-text`}
                   />
                 </div>
                 <h3 className="text-lg font-semibold text-text mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-placeholder-text leading-relaxed">
+                <p className="text-text-secondary leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -295,7 +297,7 @@ export const Component = () => {
             <h2 className="text-2xl font-semibold text-text mb-4">
               Interactive Components
             </h2>
-            <p className="text-placeholder-text">
+            <p className="text-text-secondary">
               Try out the included UI components - from basic forms to advanced
               interactions
             </p>
@@ -713,11 +715,11 @@ export const Component = () => {
             <h2 className="text-2xl font-semibold text-text mb-4">
               Quick Start
             </h2>
-            <p className="text-placeholder-text mb-8">
+            <p className="text-text-secondary mb-8">
               Get up and running in less than a minute
             </p>
 
-            <div className="p-6 bg-material-opaque rounded-xl text-left border border-border">
+            <div className="p-3 bg-material-opaque rounded-xl text-left border border-border">
               <div className="flex items-center gap-2 mb-4">
                 <div className="flex gap-2">
                   <div className="w-3 h-3 bg-red rounded-full" />
