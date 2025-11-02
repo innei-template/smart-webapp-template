@@ -51,12 +51,6 @@ export const SegmentItem: Component<{
   value: string
   label: ReactNode
 }> = ({ label, value, className }) => {
-  // const isActive = useContextSelector(
-  //   SegmentGroupContext,
-  //   (v) => v.value === value,
-  // )
-  // const setValue = useContextSelector(SegmentGroupContext, (v) => v.setValue)
-  // const layoutId = useContextSelector(SegmentGroupContext, (v) => v.componentId)
   const ctx = use(SegmentGroupContext)
 
   const { value: ctxValue, setValue, componentId: layoutId } = ctx

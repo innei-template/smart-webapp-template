@@ -14,16 +14,17 @@ const ROOT = fileURLToPath(new URL('./', import.meta.url))
 
 export default defineConfig({
   plugins: [
+    codeInspectorPlugin({
+      bundler: 'vite',
+      hotKeys: ['altKey'],
+    }),
     reactRefresh(),
     tsconfigPaths(),
     checker({
       typescript: true,
       enableBuild: true,
     }),
-    codeInspectorPlugin({
-      bundler: 'vite',
-      hotKeys: ['altKey'],
-    }),
+
     tailwindcss(),
     routeBuilderPlugin({
       pagePattern: `${resolve(ROOT, './src/pages')}/**/*.tsx`,

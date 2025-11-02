@@ -17,9 +17,11 @@ const SelectTrigger = ({
   size = 'default',
   className,
   children,
+  loading,
   ...props
 }: React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger> & {
   size?: 'default' | 'sm'
+  loading?: boolean
 } & {
   ref?: React.Ref<React.ElementRef<typeof SelectPrimitive.Trigger> | null>
 }) => (
@@ -29,12 +31,12 @@ const SelectTrigger = ({
       'flex w-full items-center justify-between whitespace-nowrap rounded-lg bg-transparent',
       focusRing,
       'outline-none transition-all duration-200',
-      'border-border hover:border-fill border',
+      'border-border border',
       size === 'sm' ? 'h-8 px-3 text-sm' : 'h-9 px-3.5 py-2 text-sm',
       'placeholder:text-text-secondary',
       'disabled:cursor-not-allowed disabled:opacity-50',
       '[&>span]:line-clamp-1',
-      'shadow-zinc-100 shadow-sm hover:shadow',
+      'shadow-zinc-100 dark:shadow-zinc-800 shadow-sm hover:shadow',
       className,
       props.disabled && 'cursor-not-allowed opacity-30',
     )}
@@ -42,7 +44,11 @@ const SelectTrigger = ({
   >
     {children}
     <SelectPrimitive.Icon asChild>
-      <i className="i-mingcute-down-line -mr-1 ml-2 text-text-secondary size-4 shrink-0 opacity-60 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+      {loading ? (
+        <i className="i-mingcute-loading-3-line animate-spin size-4 text-text-tertiary" />
+      ) : (
+        <i className="i-mingcute-down-line -mr-1 ml-2 text-text-secondary size-4 shrink-0 opacity-60 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+      )}
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 )
@@ -97,7 +103,7 @@ const SelectContent = ({
   ref,
   className,
   children,
-  position = 'popper',
+  position = 'item-aligned',
   ...props
 }: React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content> & {
   ref?: React.Ref<React.ElementRef<typeof SelectPrimitive.Content> | null>
@@ -106,7 +112,7 @@ const SelectContent = ({
     <SelectPrimitive.Content
       ref={ref}
       className={clsxm(
-        'bg-material-medium backdrop-blur-background text-text z-[60] max-h-96 min-w-32 overflow-hidden rounded-[6px] border border-border p-1',
+        'bg-material-medium backdrop-blur-background no-drag-region pointer-events-auto text-text z-60 max-h-96 min-w-32 overflow-hidden rounded-[6px] border border-border p-1',
         'shadow-context-menu',
         className,
       )}
@@ -118,7 +124,7 @@ const SelectContent = ({
         className={clsxm(
           'p-0',
           position === 'popper' &&
-            'h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]',
+            'h-(--radix-select-trigger-height) w-full min-w-(--radix-select-trigger-width)',
         )}
       >
         {children}

@@ -25,7 +25,7 @@ import { Divider } from '~/components/ui/divider/Divider'
 import { Input } from '~/components/ui/input/Input'
 import { Label } from '~/components/ui/label/Label'
 import { BasePrompt, Modal } from '~/components/ui/modal'
-import { SegmentTab } from '~/components/ui/segment-tab/SegmentTab'
+import { SegmentGroup, SegmentItem } from '~/components/ui/segment'
 import {
   Select,
   SelectContent,
@@ -90,24 +90,6 @@ export const Component = () => {
       },
     })
   }
-
-  const tabItems = [
-    {
-      value: 'overview',
-      label: 'Overview',
-      icon: <i className="i-mingcute-home-4-line w-4 h-4" />,
-    },
-    {
-      value: 'components',
-      label: 'Components',
-      icon: <i className="i-mingcute-grid-line w-4 h-4" />,
-    },
-    {
-      value: 'settings',
-      label: 'Settings',
-      icon: <i className="i-mingcute-settings-3-line w-4 h-4" />,
-    },
-  ]
 
   const themeOptions = [
     { value: 'light', icon: 'i-mingcute-sun-line', label: 'Light' },
@@ -572,11 +554,14 @@ export const Component = () => {
                       Segment Tab Control
                     </h4>
                     <div className="space-y-4">
-                      <SegmentTab
-                        items={tabItems}
+                      <SegmentGroup
                         value={selectedTab}
-                        onChange={setSelectedTab}
-                      />
+                        onValueChanged={setSelectedTab}
+                      >
+                        <SegmentItem value="overview" label="Overview" />
+                        <SegmentItem value="components" label="Components" />
+                        <SegmentItem value="settings" label="Settings" />
+                      </SegmentGroup>
                       <div className="p-4 bg-fill/30 rounded-lg border border-border">
                         <div className="text-sm text-text">
                           {selectedTab === 'overview' && (
