@@ -20,7 +20,7 @@ export const Toaster = ({ ...props }: ToasterProps) => {
         classNames: {
           // Card shell
           toast:
-            'group pointer-events-auto flex gap-3 rounded-xl border border-border bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/70 shadow-lg shadow-black/5 ring-1 ring-border',
+            'group pointer-events-auto flex gap-3 rounded-xl border border-border bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/70 shadow-lg shadow-black/5 ring-1 ring-border',
           // Title & description
           title: 'text-text font-medium',
           description: 'text-text-tertiary text-sm leading-relaxed',

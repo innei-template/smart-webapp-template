@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import type { Atom, PrimitiveAtom } from 'jotai'
 import { createStore, useAtom, useAtomValue, useSetAtom } from 'jotai'
 import { selectAtom } from 'jotai/utils'
@@ -30,6 +31,7 @@ export const createAtomSelector = <T>(atom: Atom<T>) => {
     useAtomValue(
       selectAtom(
         atom,
+
         useCallback((a) => selector(a as T), deps),
       ),
     )
