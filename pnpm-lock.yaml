@@ -96,11 +96,11 @@ importers:
         specifier: 19.2.0
         version: 19.2.0(react@19.2.0)
       react-router:
-        specifier: 7.9.5
-        version: 7.9.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        specifier: 7.18.0
+        version: 7.18.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       react-scan:
         specifier: 0.4.3
-        version: 0.4.3(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react-router@7.9.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)(rollup@4.52.5)
+        version: 0.4.3(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react-router@7.18.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)(rollup@4.52.5)
       sonner:
         specifier: 2.0.7
         version: 2.0.7(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -2794,6 +2794,7 @@ packages:
   eslint@9.39.0:
     resolution: {integrity: sha512-iy2GE3MHrYTL5lrCtMZ0X1KLEKKUjmK0kzwcnefhR66txcEmXZD2YWgR5GNdcEwkNx3a0siYkSvl0vIC+Svjmg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -2965,7 +2966,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   globals@11.12.0:
     resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==}
@@ -3666,8 +3667,8 @@ packages:
       '@types/react':
         optional: true
 
-  react-router@7.9.5:
-    resolution: {integrity: sha512-JmxqrnBZ6E9hWmf02jzNn9Jm3UqyeimyiwzD69NjxGySG6lIz/1LVPsoTCwN7NBX2XjCEa1LIX5EMz1j2b6u6A==}
+  react-router@7.18.0:
+    resolution: {integrity: sha512-pTTGt8J+ji1NOmYnjzT+bAJy/1zD+Jp4ziO6cL7T3ZLvXKtusO7BpFqlRXitqpcPVqllsIXFHRMt+2/k3Xn6HQ==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -3977,6 +3978,7 @@ packages:
   tsconfck@3.1.6:
     resolution: {integrity: sha512-ks6Vjr/jEw0P1gmOVwutM3B7fWxoWBL2KRDb1JfqGVawBmO5UsvmWOQFGHBPl5yxYz4eERr19E6L7NMv+Fej4w==}
     engines: {node: ^18 || >=20}
+    deprecated: unmaintained
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
@@ -7893,7 +7895,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.2.2
 
-  react-router@7.9.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  react-router@7.18.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
     dependencies:
       cookie: 1.0.2
       react: 19.2.0
@@ -7901,7 +7903,7 @@ snapshots:
     optionalDependencies:
       react-dom: 19.2.0(react@19.2.0)
 
-  react-scan@0.4.3(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react-router@7.9.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)(rollup@4.52.5):
+  react-scan@0.4.3(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react-router@7.18.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)(rollup@4.52.5):
     dependencies:
       '@babel/core': 7.27.4
       '@babel/generator': 7.27.5
@@ -7923,7 +7925,7 @@ snapshots:
       react-dom: 19.2.0(react@19.2.0)
       tsx: 4.19.4
     optionalDependencies:
-      react-router: 7.9.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      react-router: 7.18.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       unplugin: 2.1.0
     transitivePeerDependencies:
       - '@types/react'
